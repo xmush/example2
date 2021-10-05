@@ -2,7 +2,15 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request) :
-    return render(request, 'blog/index.html')
+    context = {
+        'title' : 'blog',
+        'author' : 'random',
+    }
+    return render(request, 'blog/index.html', context)
 
 def loadmore(request) :
-    return render(request, 'blog/loadmore.html')
+    context = {
+        'title' : 'loadmore',
+        'author' : 'vylona',
+    }
+    return render(request, 'blog/index.html', context)
