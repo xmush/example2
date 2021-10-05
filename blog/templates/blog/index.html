@@ -7,7 +7,7 @@
     <title>Blog | {{ title }}</title>
 </head>
 <body>
-    <h1>Selamat datang di {{ title }}</h1>
+    <h1>Selamat datang di cerita {{ title }}</h1>
 
     <p>You’ll need to avoid naming projects after built-in Python or Django components. In particular, this means you should avoid using names like django (which will conflict with Django itself) or test (which conflicts with a built-in Python package).</p>
     <small>by : {{ author }}</small>
@@ -21,11 +21,13 @@
         <li>
             <a href="/blog">Blog</a>
         </li>
-        <ul>
-            <li>
-                <a href="/blog/loadmore">Loadmore</a>
-            </li>
-        </ul>
+            <ul>
+
+                {% for link, menu in nav %}
+                    <li><a href="{{link}}">{{menu}}</a></li>
+                {% endfor %}
+
+            </ul> 
         <li>
             <a href="/contact">Contact</a>
         </li>
