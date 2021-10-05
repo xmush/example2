@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog', #setup tempelate folder by app name
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'example2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['tempelates'],
+        'DIRS': ['templates', 'blog/templates'], #setup tempelate folder by dir name
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
